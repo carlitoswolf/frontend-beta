@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIC TAC TOE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <style>
         /* ------------------------------------ Click on login and Sign Up to  changue and view the effect
 ---------------------------------------
@@ -14,7 +17,7 @@
             margin: 0px auto;
             padding: 0px;
             text-align: center;
-            font-family: "Open Sans", sans-serif;
+            font-family: "Lexend", sans-serif;
         }
 
         .cotn_principal {
@@ -44,10 +47,22 @@
             /* IE6-9 fallback on horizontal gradient */
         }
 
+        .titulo {
+            text-align: center;
+            font-size: 4rem;
+            color: white;
+            /* Ajusta el margen superior según sea necesario */
+        }
+
         .cont_centrar {
+            background: rgb(129, 161, 255);
+            background: linear-gradient(90deg, rgba(129, 161, 255, 1) 0%, rgba(227, 129, 255, 1) 100%);
             display: flex;
-            align-self: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: 100%;
+            gap: 3rem;
         }
 
         .cont_login {
@@ -392,6 +407,7 @@ background text
 
     <div class="cotn_principal">
         <div class="cont_centrar">
+            <h1 class="titulo">TIC TAC TOE</h1>
             <div class="cont_login">
                 <div class="cont_info_log_sign_up">
                     <div class="col_md_login">

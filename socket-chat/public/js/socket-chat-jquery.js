@@ -1,7 +1,7 @@
 var params = new URLSearchParams(window.location.search);
 
 var nombre = params.get('nombre');
-var sala = params.get('sala');
+var sala = "sala-publica"
 
 
 // referencias de jQuery
@@ -19,13 +19,13 @@ function renderizarUsuarios(personas) { // [{},{},{}]
     var html = '';
 
     html += '<li>';
-    html += '    <a href="javascript:void(0)" class="active"> Chat de <span> ' + params.get('sala') + '</span></a>';
+    html += '    <a href="javascript:void(0)"  class="active"> Chat General</a>';
     html += '</li>';
 
     for (var i = 0; i < personas.length; i++) {
 
         html += '<li>';
-        html += '    <a data-id="' + personas[i].id + '"  href="javascript:void(0)"><img src="assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>' + personas[i].nombre + ' <small class="text-success">online</small></span></a>';
+        html += '    <a data-id="' + personas[i].id + '"  onclick="mostrarAlerta()" href="javascript:void(0)"><img src="assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>' + personas[i].nombre + ' <small class="text-success">online</small></span></a>';
         html += '</li>';
     }
 
@@ -33,6 +33,9 @@ function renderizarUsuarios(personas) { // [{},{},{}]
 
 }
 
+function mostrarAlerta() {
+    alert("¡Esta es una alerta de ejemplo!");
+}
 
 function renderizarMensajes(mensaje, yo) {
 

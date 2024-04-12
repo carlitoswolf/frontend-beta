@@ -91,13 +91,13 @@ function GameUi() {
             var oEndInfo = Tool.getE('#end_info');
             switch (oCtrl.getWinner()) {
                 case 'ai':
-                    oEndInfo.innerHTML = 'LOST';
+                    oEndInfo.innerHTML = 'PERDISTE';
                     break;
                 case 'player':
-                    oEndInfo.innerHTML = 'WIN';
+                    oEndInfo.innerHTML = 'GANASTE';
                     break;
                 case 'no':
-                    oEndInfo.innerHTML = 'ITE';
+                    oEndInfo.innerHTML = 'EMPATE';
                     break;
             }
             oScreen.style['display'] = 'block';
